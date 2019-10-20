@@ -55,7 +55,7 @@ module.exports = {
     },
     {
       from: './src/assets/images',
-      to: './assets/img'
+      to: './assets/images'
     }
     ]),
   ]
