@@ -1,0 +1,61 @@
+$black: #131313;
+$orange: #e3b873;
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../assets/fonts/YesevaOne-Regular.ttf");
+}
+
+.button {
+  font-family: "Raleway";
+  border: none;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background: inherit;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  border-radius: 2px;
+}
+.button:hover {
+  background: $orange;
+  border: 1px solid $orange;
+}
+.button-color {
+  background: $orange;
+  border: 1px solid $orange;
+}
+.button-call {
+  padding: 13px 33px;
+}
+.big-button {
+  height: 51px;
+  width: 207px;
+}
+@media (max-width: 1009px) {
+  .button-call {
+    display: none;
+  }
+}
+
+@media (max-width: 1009px) {
+  .button-call {
+    display: none;
+  }
+}
+
+@media (max-width: 454px) {
+   .button-block {
+     display: flex;
+     flex-direction: column;
+   }
+   .big-button {
+     width: 100%;
+   }
+
+}

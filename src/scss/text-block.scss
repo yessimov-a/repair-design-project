@@ -1,0 +1,56 @@
+
+$black: #131313;
+$orange: #e3b873;
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../assets/fonts/YesevaOne-Regular.ttf");
+}
+
+.text-block {
+  padding: 200px 60px;
+  &__title {
+    font-family: "YesevaOne-Regular";
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  &__text {
+    font-family: "Raleway";
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 798px) {
+  .text-block {
+    padding: 80px 18px;
+    &__title {
+      font-family: "YesevaOne-Regular";
+      font-size: 23px;
+      line-height: 132.83%;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    &__text {
+      font-family: "Raleway";
+      font-size: 18px;
+      line-height: 135.84%;
+      margin-bottom: 40px;
+      color: #ffffff;
+    }
+  }
+  .slider_photos_nav {
+    .text-block {
+      padding-top: 10px !important;
+    }
+  }
+}

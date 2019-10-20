@@ -1,0 +1,21 @@
+$black: #131313;
+$orange: #e3b873;
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../assets/fonts/YesevaOne-Regular.ttf");
+}
+
+.our_clients_block {
+    margin-top: 100px;
+    padding: 0 100px;
+  }
+  
+  @media(max-width: 495px) {
+    .our_clients_block {
+      display: none;
+    }
+  }

@@ -1,0 +1,40 @@
+$black: #131313;
+$orange: #e3b873;
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../assets/fonts/YesevaOne-Regular.ttf");
+}
+
+.steps_block {
+  padding: 100px 100px;
+  background: $black;
+  display: flex;
+}
+
+.slider-steps {
+  position: relative;
+  overflow: hidden;
+  .slider-steps__wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+    .slider-steps__item {
+      flex: 0 0 100%;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .steps_block {
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .steps_block {
+    display: none;
+  }
+}

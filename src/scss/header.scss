@@ -1,0 +1,80 @@
+$max-width: 1440px;
+$black: #131313;
+$orange: #e3b873;
+
+.header {
+  background: $black;
+  height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-right: 83px;
+  padding-left: 83px;
+  .header__logo {
+    font-family: "YesevaOne-Regular";
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $orange;
+  }
+
+  .header__phone {
+    font-family: "Raleway";
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: $orange;
+  }
+}
+
+
+
+.nav {
+  .nav__list {
+    display: flex;
+    .nav__list-item {
+      font-family: "Raleway";
+      margin: 20px;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      .nav__link {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      .nav__link--active {
+        text-decoration: none;
+        color: $orange;
+      }
+    }
+  }
+}
+
+@media(max-width: 1296px) {
+    .header {
+        width: 100%;
+        padding: 0;
+        justify-content: space-evenly;
+        .header__logo {
+          font-size: 12px;
+        }
+    }
+    .nav__list-item {
+        font-size: 12px !important;
+        margin: 10px !important;
+    }
+}
+
+@media (max-width: 750px) {
+  .header {
+    justify-content: space-between;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .nav {
+
+    display: none;
+  }
+}

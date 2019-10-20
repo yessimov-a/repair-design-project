@@ -1,0 +1,53 @@
+$black: #131313;
+$orange: #e3b873;
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../assets/fonts/YesevaOne-Regular.ttf");
+}
+
+.home-block {
+  display: flex;
+  &__sidebar {
+    width: 82px;
+    background: $black;
+    .link-block {
+      padding-top: 60px;
+      top: 400px;
+      position: absolute;
+      transform: rotate(90deg);
+      display: flex;
+      align-items: center;
+      &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-right: 8px;
+        font-size: 14px;
+        line-height: 16px;
+        font-family: "Raleway";
+        color: $orange;
+      }
+      &__span {
+        display: inline-block;
+        width: 51px;
+        height: 1px;
+        background: orange;
+      }
+    }
+  }
+  .home-block__content {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/images/home-section-bg.png");
+    width: 100%;
+  }
+}
+
+@media (max-width: 798px) {
+  .home-block {
+    &__sidebar {
+      display: none;
+    }
+  }
+}

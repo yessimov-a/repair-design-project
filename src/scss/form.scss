@@ -1,0 +1,209 @@
+$max-width: 1440px;
+$black: #131313;
+$orange: #e3b873;
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../assets/fonts/YesevaOne-Regular.ttf");
+}
+
+.mobile-form {
+  display: none !important;
+  background: linear-gradient(to bottom, $black 85%, #fff 85%) !important;
+}
+.form_black {
+  background: $black;
+  padding: 32px 50px;
+}
+.form-title {
+  font-family: "Raleway";
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  color: #ffffff;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 91px;
+  .field_min {
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 0;
+  }
+  .field {
+    height: 51px;
+    width: 769px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .input-block__second {
+    margin-left: 67px;
+  }
+  .input-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    .label_black {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    label {
+      font-size: 15px;
+      line-height: 20px;
+      color: rgba(54, 54, 54, 0.5);
+    }
+  }
+  .form-input_big {
+    z-index: 5;
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 1px solid #363636;
+    outline: none;
+    background: inherit;
+  }
+  .form-input {
+    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 24px;
+    width: 231px;
+    color: #363636;
+    border: none;
+    border-bottom: 1px solid #363636;
+    outline: none;
+  }
+  .form-submit {
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #e3b873;
+    box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+    border-radius: 2px;
+    width: 200px;
+    height: 51px;
+    border: none;
+    color: #ffffff;
+  }
+
+  .check-field {
+    margin: 20px;
+    .check {
+      background: $orange;
+    }
+    .check-label_white {
+      font-family: "Raleway";
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    .check-label {
+      font-family: "Raleway";
+      font-size: 16px;
+      line-height: 22px;
+      color: #181818;
+    }
+  }
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $orange;
+  background-color: $orange;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  left: 3px;
+  top: 4px;
+  width: 10px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+@media (max-width: 770px) {
+  .mobile-form {
+    display: block !important;
+  }
+  .desktop-form {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .input-block__second {
+    margin-left: 0 !important;
+  }
+  .input-block {
+    margin-bottom: 20px;
+  }
+  .field_min {
+    flex-direction: column;
+    margin: 0 !important;
+  }
+  .form-submit {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,83 @@
+$black: #131313;
+$orange: #e3b873;
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../assets/fonts/YesevaOne-Regular.ttf");
+}
+
+.gallery-slider-block {
+  display: none;
+  background: linear-gradient(to top, $black 45%, #fff 45%);
+
+}
+
+.gallery_block {
+  margin-bottom: 90px;
+  padding: 0 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/images/gallery-bg.png");
+  max-height: 864px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  .gallery_block-text {
+    padding-top: 137px;
+    .gallery_block-list {
+      font-family: "Raleway";
+      padding-top: 47px;
+      font-size: 20px;
+      line-height: 44px;
+      color: #ffffff;
+      box-sizing: border-box;
+    }
+    .gallery_block-list li:hover {
+      color: $orange;
+      // border-bottom: 1px solid $orange;
+      box-shadow: 0px -1px 0px $orange inset;
+    }
+  }
+
+  .gallery {
+    display: flex;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      margin-left: 40px;
+    }
+    .col :last-child {
+      margin-top: 36px;
+    }
+  }
+  .gallery :first-child {
+    margin-top: -20px;
+  }
+  .gallery :last-child {
+    margin-top: -90px;
+  }
+}
+
+@media (max-width: 1320px) {
+  .gallery_block {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 1176px) {
+  .gallery_block-text {
+    display: none;
+  }
+  .gallery {
+    display: none !important;
+  }
+  .gallery_block {
+    margin-top: 50px;
+  }
+  .gallery-slider-block {
+    display: block;
+  }
+}

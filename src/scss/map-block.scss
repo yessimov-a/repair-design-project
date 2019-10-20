@@ -1,0 +1,51 @@
+$black: #131313;
+$orange: #e3b873;
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("../assets/fonts/YesevaOne-Regular.ttf");
+}
+
+.map_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%),
+    url(../assets/images/map-bg.png);
+}
+
+.map {
+  max-width: 925px;
+  width: 100%;
+}
+
+.address_block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 52px 0 42px 0;
+  .address_block-text {
+    font-family: "YesevaOne-Regular";
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+    color: #e3b873;
+  }
+  .link_block a :first-child {
+    margin-left: 15px;
+  }
+}
+
+
+@media(max-width: 495px) {
+  .map_block {
+    margin-top: 0px;
+    background: $black;
+  }
+}
