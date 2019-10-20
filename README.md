@@ -10,6 +10,12 @@ First install packages
 npm install
 ```
 
+Build project
+
+```
+npm run build
+```
+
 Start project
 
 ```
