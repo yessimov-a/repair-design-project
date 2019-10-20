@@ -7,7 +7,7 @@ RS2019-Q3 project
 First install packages
 
 ```
-npm init
+npm install
 ```
 
 Start project
